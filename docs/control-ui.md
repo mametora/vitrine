@@ -281,7 +281,7 @@ WebSocket接続管理と状態同期を行うフック。
 
 ```typescript
 import { createSignal, onCleanup } from "solid-js";
-import type { DisplayState, WsMessage } from "@holo-figure/shared";
+import type { DisplayState, WsMessage } from "@vitrine/shared";
 
 function useDisplayConnection() {
   const [state, setState] = createSignal<DisplayState>({
@@ -417,7 +417,7 @@ packages/control/src/
   "dependencies": {
     "solid-js": "^1.9.11",
     "three": "^0.183.2",
-    "@holo-figure/shared": "workspace:*"
+    "@vitrine/shared": "workspace:*"
   },
   "devDependencies": {
     "vite": "^8.0.0",

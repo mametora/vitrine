@@ -296,7 +296,7 @@ class PerformanceMonitor {
 
 ```typescript
 // ws-client.ts
-import type { WsMessage, WsCommand, WsStateSync } from "@holo-figure/shared";
+import type { WsMessage, WsCommand, WsStateSync } from "@vitrine/shared";
 
 type CommandHandler = (command: WsCommand) => void;
 type StateSyncHandler = (state: WsStateSync["state"]) => void;
@@ -357,7 +357,7 @@ class DisplayWsClient {
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Holo Figure Display</title>
+  <title>Vitrine Display</title>
   <style>
     * { margin: 0; padding: 0; }
     body { overflow: hidden; background: #000; }
@@ -378,7 +378,7 @@ class DisplayWsClient {
   "dependencies": {
     "three": "^0.183.2",
     "@pixiv/three-vrm": "^3.4.5",
-    "@holo-figure/shared": "workspace:*"
+    "@vitrine/shared": "workspace:*"
   },
   "devDependencies": {
     "@types/three": "^0.183.0",

@@ -154,7 +154,7 @@ displayRoutes.get("/state", async (c) => {
 ### 実装
 
 ```typescript
-import type { DisplayState, WsCommand } from "@holo-figure/shared";
+import type { DisplayState, WsCommand } from "@vitrine/shared";
 
 class DisplayService {
   private state: DisplayState = {
@@ -324,7 +324,7 @@ DATA_DIR=./data    # データディレクトリパス
     "@hono/node-server": "^1.x",
     "@hono/node-ws": "^1.x",
     "better-sqlite3": "^12.7.1",
-    "@holo-figure/shared": "workspace:*"
+    "@vitrine/shared": "workspace:*"
   },
   "devDependencies": {
     "@types/better-sqlite3": "^7.x",

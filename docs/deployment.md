@@ -2,7 +2,7 @@
 
 ## 概要
 
-Raspberry Pi 5にHolo Figureシステムをデプロイし、Chromiumキオスクモードでディスプレイレンダラーを自動起動する手順を定義する。
+Raspberry Pi 5にVitrineシステムをデプロイし、Chromiumキオスクモードでディスプレイレンダラーを自動起動する手順を定義する。
 
 ## Raspberry Pi 5 セットアップ
 
@@ -66,11 +66,11 @@ set -e
 pnpm install
 
 # 共有パッケージビルド
-pnpm -F @holo-figure/shared build
+pnpm -F @vitrine/shared build
 
 # フロントエンドビルド
-pnpm -F @holo-figure/display build
-pnpm -F @holo-figure/control build
+pnpm -F @vitrine/display build
+pnpm -F @vitrine/control build
 
 # サーバーにフロントエンド成果物を配置
 mkdir -p packages/server/public
@@ -78,7 +78,7 @@ cp -r packages/display/dist packages/server/public/display
 cp -r packages/control/dist packages/server/public/control
 
 # サーバービルド
-pnpm -F @holo-figure/server build
+pnpm -F @vitrine/server build
 
 echo "Build complete!"
 ```
@@ -92,7 +92,7 @@ echo "Build complete!"
 # scripts/deploy.sh
 
 PI_HOST="${PI_HOST:-pi@raspberrypi.local}"
-DEPLOY_DIR="/opt/holo-figure"
+DEPLOY_DIR="/opt/vitrine"
 
 set -e
 
@@ -111,9 +111,9 @@ rsync -avz --delete \
 
 # Pi上で依存インストール & サービス再起動
 ssh "${PI_HOST}" << 'EOF'
-  cd /opt/holo-figure
+  cd /opt/vitrine
   pnpm install --prod
-  sudo systemctl restart holo-figure
+  sudo systemctl restart vitrine
 EOF
 
 echo "Deploy complete!"
@@ -153,7 +153,7 @@ chromium-browser \
 
 ```bash
 # ~/.xinitrc
-exec /opt/holo-figure/scripts/kiosk.sh
+exec /opt/vitrine/scripts/kiosk.sh
 ```
 
 ```bash
@@ -172,24 +172,24 @@ sudo raspi-config
 
 ## systemdサービス
 
-### Holo Figureサーバー
+### Vitrineサーバー
 
 ```ini
-# /etc/systemd/system/holo-figure.service
+# /etc/systemd/system/vitrine.service
 [Unit]
-Description=Holo Figure Server
+Description=Vitrine Server
 After=network.target
 
 [Service]
 Type=simple
 User=pi
-WorkingDirectory=/opt/holo-figure
+WorkingDirectory=/opt/vitrine
 ExecStart=/home/pi/.local/share/fnm/aliases/default/bin/node dist/index.js
 Restart=always
 RestartSec=5
 Environment=NODE_ENV=production
 Environment=PORT=3000
-Environment=DATA_DIR=/opt/holo-figure/data
+Environment=DATA_DIR=/opt/vitrine/data
 
 [Install]
 WantedBy=multi-user.target
@@ -199,18 +199,18 @@ WantedBy=multi-user.target
 
 ```bash
 sudo systemctl daemon-reload
-sudo systemctl enable holo-figure
-sudo systemctl start holo-figure
+sudo systemctl enable vitrine
+sudo systemctl start vitrine
 ```
 
 ### 動作確認
 
 ```bash
 # サービス状態確認
-sudo systemctl status holo-figure
+sudo systemctl status vitrine
 
 # ログ確認
-sudo journalctl -u holo-figure -f
+sudo journalctl -u vitrine -f
 ```
 
 ## ハーフミラーディスプレイの物理構成

@@ -36,14 +36,14 @@ graph TD
 pnpm workspaces によるモノレポ構成。
 
 ```
-holo_figure/
+vitrine/
 ├── package.json              # ワークスペースルート
 ├── pnpm-workspace.yaml
 ├── tsconfig.base.json        # 共通TypeScript設定
 ├── .env                      # 環境変数
 ├── docs/                     # 設計書
 ├── data/                     # ランタイムデータ（gitignore）
-│   ├── holo_figure.db        # SQLiteデータベース
+│   ├── vitrine.db             # SQLiteデータベース
 │   └── vrm/                  # アップロードされたVRMファイル
 └── packages/
     ├── shared/               # 共有型定義・プロトコル・定数
