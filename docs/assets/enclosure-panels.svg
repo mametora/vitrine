@@ -1,0 +1,161 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 520" font-family="sans-serif" font-size="12">
+  <defs>
+    <marker id="dim" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#888"/>
+    </marker>
+    <marker id="dim-r" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto">
+      <path d="M6,0 L0,3 L6,6 Z" fill="#888"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="360" y="24" text-anchor="middle" font-size="16" font-weight="bold" fill="#333">筐体パネル一覧（展開図）</text>
+  <text x="360" y="42" text-anchor="middle" font-size="11" fill="#888">材質: 3mm 黒アクリル板 / 溶剤接着（バットジョイント）</text>
+
+  <!-- ==================== -->
+  <!-- Panel A: Bottom -->
+  <!-- ==================== -->
+  <g transform="translate(50, 70)">
+    <rect x="0" y="0" width="150" height="100" rx="2" fill="#3a3226" stroke="#666" stroke-width="1.5"/>
+    <!-- M2.5 standoff holes -->
+    <circle cx="20" cy="15" r="3" fill="none" stroke="#4a90d9" stroke-width="1.2"/>
+    <circle cx="130" cy="15" r="3" fill="none" stroke="#4a90d9" stroke-width="1.2"/>
+    <circle cx="20" cy="85" r="3" fill="none" stroke="#4a90d9" stroke-width="1.2"/>
+    <circle cx="130" cy="85" r="3" fill="none" stroke="#4a90d9" stroke-width="1.2"/>
+    <text x="75" y="52" text-anchor="middle" fill="#4a90d9" font-size="8">M2.5 スタンドオフ</text>
+    <text x="75" y="63" text-anchor="middle" fill="#4a90d9" font-size="8">取付穴 ×4</text>
+
+    <!-- Label -->
+    <text x="75" y="-8" text-anchor="middle" font-size="13" font-weight="bold" fill="#e8912d">A. 底面</text>
+    <!-- Dimensions -->
+    <line x1="0" y1="110" x2="150" y2="110" stroke="#888" stroke-width="0.8"/>
+    <line x1="0" y1="105" x2="0" y2="115" stroke="#888" stroke-width="0.8"/>
+    <line x1="150" y1="105" x2="150" y2="115" stroke="#888" stroke-width="0.8"/>
+    <text x="75" y="123" text-anchor="middle" fill="#888" font-size="10">216mm</text>
+    <line x1="-10" y1="0" x2="-10" y2="100" stroke="#888" stroke-width="0.8"/>
+    <line x1="-15" y1="0" x2="-5" y2="0" stroke="#888" stroke-width="0.8"/>
+    <line x1="-15" y1="100" x2="-5" y2="100" stroke="#888" stroke-width="0.8"/>
+    <text x="-20" y="55" text-anchor="middle" fill="#888" font-size="10" transform="rotate(-90, -20, 55)">146mm</text>
+  </g>
+
+  <!-- ==================== -->
+  <!-- Panel B: Top -->
+  <!-- ==================== -->
+  <g transform="translate(260, 70)">
+    <rect x="0" y="0" width="150" height="100" rx="2" fill="#3a3226" stroke="#666" stroke-width="1.5"/>
+    <text x="75" y="-8" text-anchor="middle" font-size="13" font-weight="bold" fill="#e8912d">B. 天面</text>
+    <text x="75" y="50" text-anchor="middle" fill="#888" font-size="10">216 × 146mm</text>
+    <text x="75" y="65" text-anchor="middle" fill="#777" font-size="9">（底面と同寸）</text>
+    <text x="75" y="80" text-anchor="middle" fill="#e8912d" font-size="9">着脱式：磁石固定</text>
+    <!-- Magnet positions -->
+    <circle cx="12" cy="10" r="4" fill="none" stroke="#e8912d" stroke-width="1" stroke-dasharray="2,2"/>
+    <circle cx="138" cy="10" r="4" fill="none" stroke="#e8912d" stroke-width="1" stroke-dasharray="2,2"/>
+    <circle cx="12" cy="90" r="4" fill="none" stroke="#e8912d" stroke-width="1" stroke-dasharray="2,2"/>
+    <circle cx="138" cy="90" r="4" fill="none" stroke="#e8912d" stroke-width="1" stroke-dasharray="2,2"/>
+  </g>
+
+  <!-- ==================== -->
+  <!-- Panel C: Left side -->
+  <!-- ==================== -->
+  <g transform="translate(50, 230)">
+    <rect x="0" y="0" width="150" height="140" rx="2" fill="#3a3226" stroke="#666" stroke-width="1.5"/>
+    <!-- Mirror support tab positions (front and back) -->
+    <line x1="10" y1="130" x2="140" y2="0" stroke="#88ccff" stroke-width="0.5" stroke-dasharray="3,4" opacity="0.4"/>
+    <rect x="12" y="122" width="12" height="8" rx="1" fill="#88ccff" opacity="0.6" transform="rotate(-41, 18, 126)"/>
+    <rect x="126" y="6" width="12" height="8" rx="1" fill="#88ccff" opacity="0.6" transform="rotate(-41, 132, 10)"/>
+    <text x="75" y="55" text-anchor="middle" fill="#88ccff" font-size="9">ミラー支持タブ ×2</text>
+    <text x="75" y="67" text-anchor="middle" fill="#88ccff" font-size="7">（前後に45°で接着）</text>
+
+    <text x="75" y="-8" text-anchor="middle" font-size="13" font-weight="bold" fill="#e8912d">C. 左側面</text>
+    <!-- Dimensions -->
+    <line x1="0" y1="150" x2="150" y2="150" stroke="#888" stroke-width="0.8"/>
+    <line x1="0" y1="145" x2="0" y2="155" stroke="#888" stroke-width="0.8"/>
+    <line x1="150" y1="145" x2="150" y2="155" stroke="#888" stroke-width="0.8"/>
+    <text x="75" y="163" text-anchor="middle" fill="#888" font-size="10">216mm</text>
+    <line x1="-10" y1="0" x2="-10" y2="140" stroke="#888" stroke-width="0.8"/>
+    <line x1="-15" y1="0" x2="-5" y2="0" stroke="#888" stroke-width="0.8"/>
+    <line x1="-15" y1="140" x2="-5" y2="140" stroke="#888" stroke-width="0.8"/>
+    <text x="-20" y="75" text-anchor="middle" fill="#888" font-size="10" transform="rotate(-90, -20, 75)">230mm</text>
+  </g>
+
+  <!-- ==================== -->
+  <!-- Panel D: Right side -->
+  <!-- ==================== -->
+  <g transform="translate(260, 230)">
+    <rect x="0" y="0" width="150" height="140" rx="2" fill="#3a3226" stroke="#666" stroke-width="1.5"/>
+    <!-- Mirror support tab positions (front and back) -->
+    <line x1="10" y1="130" x2="140" y2="0" stroke="#88ccff" stroke-width="0.5" stroke-dasharray="3,4" opacity="0.4"/>
+    <rect x="12" y="122" width="12" height="8" rx="1" fill="#88ccff" opacity="0.6" transform="rotate(-41, 18, 126)"/>
+    <rect x="126" y="6" width="12" height="8" rx="1" fill="#88ccff" opacity="0.6" transform="rotate(-41, 132, 10)"/>
+    <text x="75" y="55" text-anchor="middle" fill="#88ccff" font-size="9">ミラー支持タブ ×2</text>
+    <text x="75" y="67" text-anchor="middle" fill="#88ccff" font-size="7">（前後に45°で接着）</text>
+
+    <text x="75" y="-8" text-anchor="middle" font-size="13" font-weight="bold" fill="#e8912d">D. 右側面</text>
+    <text x="75" y="80" text-anchor="middle" fill="#888" font-size="10">216 × 230mm</text>
+    <text x="75" y="95" text-anchor="middle" fill="#777" font-size="9">（左側面と対称）</text>
+  </g>
+
+  <!-- ==================== -->
+  <!-- Panel E: Back -->
+  <!-- ==================== -->
+  <g transform="translate(470, 70)">
+    <rect x="0" y="0" width="100" height="140" rx="2" fill="#3a3226" stroke="#666" stroke-width="1.5"/>
+    <!-- Ventilation holes -->
+    <g fill="#1a1a1a">
+      <rect x="15" y="100" width="30" height="3" rx="1"/>
+      <rect x="15" y="107" width="30" height="3" rx="1"/>
+      <rect x="15" y="114" width="30" height="3" rx="1"/>
+      <rect x="55" y="100" width="30" height="3" rx="1"/>
+      <rect x="55" y="107" width="30" height="3" rx="1"/>
+      <rect x="55" y="114" width="30" height="3" rx="1"/>
+    </g>
+    <text x="50" y="132" text-anchor="middle" fill="#777" font-size="8">通気スリット</text>
+    <!-- Cable hole -->
+    <rect x="38" y="120" width="24" height="14" rx="3" fill="#1a1a1a" stroke="#555" stroke-width="0.8"/>
+    <text x="50" y="96" text-anchor="middle" fill="#777" font-size="8">USB-C穴</text>
+
+    <text x="50" y="-8" text-anchor="middle" font-size="13" font-weight="bold" fill="#e8912d">E. 背面</text>
+    <!-- Dimensions -->
+    <line x1="0" y1="150" x2="100" y2="150" stroke="#888" stroke-width="0.8"/>
+    <line x1="0" y1="145" x2="0" y2="155" stroke="#888" stroke-width="0.8"/>
+    <line x1="100" y1="145" x2="100" y2="155" stroke="#888" stroke-width="0.8"/>
+    <text x="50" y="163" text-anchor="middle" fill="#888" font-size="10">140mm</text>
+    <line x1="110" y1="0" x2="110" y2="140" stroke="#888" stroke-width="0.8"/>
+    <line x1="105" y1="0" x2="115" y2="0" stroke="#888" stroke-width="0.8"/>
+    <line x1="105" y1="140" x2="115" y2="140" stroke="#888" stroke-width="0.8"/>
+    <text x="125" y="75" text-anchor="middle" fill="#888" font-size="10" transform="rotate(90, 125, 75)">230mm</text>
+  </g>
+
+  <!-- ==================== -->
+  <!-- Panel F: Front (viewing window) -->
+  <!-- ==================== -->
+  <g transform="translate(470, 270)">
+    <rect x="0" y="0" width="100" height="140" rx="2" fill="#3a3226" stroke="#666" stroke-width="1.5"/>
+    <!-- Viewing window -->
+    <rect x="10" y="10" width="80" height="90" rx="3" fill="#111" stroke="#e8912d" stroke-width="1.5" stroke-dasharray="5,3"/>
+    <text x="50" y="50" text-anchor="middle" fill="#e8912d" font-size="10">観察窓</text>
+    <text x="50" y="65" text-anchor="middle" fill="#e8912d" font-size="8">（開口 or</text>
+    <text x="50" y="76" text-anchor="middle" fill="#e8912d" font-size="8">透明アクリル）</text>
+    <!-- Window dimensions -->
+    <text x="50" y="92" text-anchor="middle" fill="#888" font-size="8">約 120 × 130mm</text>
+
+    <text x="50" y="-8" text-anchor="middle" font-size="13" font-weight="bold" fill="#e8912d">F. 前面</text>
+    <text x="50" y="125" text-anchor="middle" fill="#888" font-size="10">140 × 230mm</text>
+    <text x="50" y="137" text-anchor="middle" fill="#777" font-size="9">（背面と同寸）</text>
+  </g>
+
+  <!-- ==================== -->
+  <!-- Legend -->
+  <!-- ==================== -->
+  <g transform="translate(50, 430)">
+    <text x="0" y="0" font-size="13" font-weight="bold" fill="#333">パネル一覧</text>
+    <line x1="0" y1="8" x2="650" y2="8" stroke="#ddd" stroke-width="0.8"/>
+
+    <text x="0" y="28" font-size="11" fill="#555">A. 底面: 216×146mm ×1枚　※M2.5スタンドオフ取付穴×4</text>
+    <text x="0" y="44" font-size="11" fill="#555">B. 天面: 216×146mm ×1枚　※着脱式（溶着しない / ネオジム磁石×4で固定）</text>
+    <text x="0" y="60" font-size="11" fill="#555">C/D. 側面: 216×230mm ×2枚</text>
+    <text x="0" y="76" font-size="11" fill="#555">E. 背面: 140×230mm ×1枚　※通気スリット + USB-C穴</text>
+    <text x="0" y="92" font-size="11" fill="#555">F. 前面: 140×230mm ×1枚　※観察窓（開口 or 透明アクリル）</text>
+    <text x="0" y="108" font-size="11" fill="#555">G. ミラー支持タブ: 15×10mm ×4個　※左右側面の内側、前後2箇所ずつ45°で接着</text>
+  </g>
+</svg>
